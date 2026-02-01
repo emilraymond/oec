@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OFEC - Home</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    
     <script src="../../js/main.js" defer></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </head>
+<body class="bg-light">
 
-<body class="bg-gray-50 text-gray-800">
-
-    <nav class="bg-[#1a1a1a] text-white p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold">OFEC</div>
-            <div class="flex items-center space-x-6">
-                <a href="home.html" class="text-blue-400">Home</a>
-                <a href="#" class="hover:text-blue-400">About</a>
-                <a href="../ar/home.html" onclick="switchLanguage('ar')"
-                    class="bg-gray-700 px-3 py-1 rounded text-sm hover:bg-gray-600 transition">
-                    العربية
-                </a>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">OFEC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-light ms-lg-3" href="../ar/home.html" onclick="switchLanguage('ar')">العربية</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <main class="container mx-auto py-12 px-4">
-        <div class="bg-white p-8 rounded-xl shadow-sm text-center max-w-lg mx-auto">
-            <h2 class="text-2xl font-bold mb-4">Latest News</h2>
-            <p id="news-placeholder" class="text-gray-500 italic">Loading...</p>
-        </div>
-    </main>
+    <div class="container py-5 text-center">
+        <h1 class="display-4 fw-bold">Welcome to OFEC Church</h1>
+        <p id="news-placeholder" class="lead text-muted mt-4 italic">Loading news...</p>
+    </div>
 
 </body>
-
 </html>

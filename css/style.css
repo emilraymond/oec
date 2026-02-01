@@ -1,0 +1,21 @@
+/* Custom Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+:lang(ar) {
+    font-family: 'Cairo', sans-serif;
+}
+
+:lang(en) {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Church Branding Colors (Optional) */
+.navbar-dark {
+    background-color: #1a1a1a !important;
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
