@@ -26,6 +26,15 @@ async function loadLayout() {
 
         // --- FIXED: Fix links in both Navbar and Footer ---
         if (base !== '') {
+            const images = document.querySelectorAll('#navbar-placeholder img, #footer-placeholder img');
+            images.forEach(img => {
+                const src = img.getAttribute('src');
+                // If src starts with / and doesn't have the base (e.g., /oec) yet, add it
+                if (src && src.startsWith('/') && !src.startsWith(base)) {
+                    img.setAttribute('src', base + src);
+                }
+            });
+
             // Target all links inside our dynamic placeholders
             const links = document.querySelectorAll('#navbar-placeholder a, #footer-placeholder a');
             links.forEach(link => {

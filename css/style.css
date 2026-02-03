@@ -16,8 +16,10 @@
 
 /* Styling for the tab you are currently on */
 .navbar-nav .nav-link.active {
-    color: #fff !important; /* Blue color for the active tab */
-    border-bottom: 2px solid #0d6efd; /* Adds an underline to the active tab */
+    color: #fff !important;
+    /* Blue color for the active tab */
+    border-bottom: 2px solid #0d6efd;
+    /* Adds an underline to the active tab */
 }
 
 /* Hover effect for the other tabs */
@@ -33,16 +35,18 @@ img {
 
 /* Hero Section Styling */
 .hero-section {
-    height: 80vh;
-    background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center;
+    height: 60vh;
+    /* background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center; */
+    background: url('../assets/images/slogan.jpg') no-repeat center center;
     background-size: cover;
+    width: 100%;
 }
 
 .hero-overlay {
-    background-color: rgba(0, 0, 0, 0.6);
+    /* display: none; */
+
     /* Darkens the image */
-    top: 0;
-    left: 0;
+    background-color: rgba(1, 0, 0, 0.6);
 }
 
 .z-1 {
@@ -85,6 +89,7 @@ footer {
 }
 
 .footer a:hover i {
-    color: #0d6efd; /* Bootstrap Primary Blue */
+    color: #0d6efd;
+    /* Bootstrap Primary Blue */
     transform: scale(1.2);
 }
