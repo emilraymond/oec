@@ -1,11 +1,11 @@
 /* Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
 
-:lang(ar) {
+:lang(ar):not(i) {
     font-family: 'Cairo', sans-serif;
 }
 
-:lang(en) {
+:lang(en):not(i) {
     font-family: 'Inter', sans-serif;
 }
 
@@ -14,8 +14,77 @@
     background-color: #1a1a1a !important;
 }
 
+/* Styling for the tab you are currently on */
+.navbar-nav .nav-link.active {
+    color: #fff !important; /* Blue color for the active tab */
+    border-bottom: 2px solid #0d6efd; /* Adds an underline to the active tab */
+}
+
+/* Hover effect for the other tabs */
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+}
+
 /* Ensure images don't overflow */
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 80vh;
+    background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Darkens the image */
+    top: 0;
+    left: 0;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    /* Pushes the footer down if content is short */
+}
+
+/**********
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+// This ensures the main content area takes up remaining space
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+**********/
+
+.footer a i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer a:hover i {
+    color: #0d6efd; /* Bootstrap Primary Blue */
+    transform: scale(1.2);
 }
