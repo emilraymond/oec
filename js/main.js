@@ -84,26 +84,20 @@ function toggleLanguage() {
 }
 
 function highlightActiveLink() {
-    // Get the current URL path
     const currentPath = window.location.pathname;
-
-    // Find all links in the navbar
+    const base = getBasePath(); // Ensure this matches your repo name (e.g., '/oec')
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     navLinks.forEach(link => {
-        const linkPath = link.getAttribute('href');
-
-        // Reset state first
         link.classList.remove('active');
+        const href = link.getAttribute('href');
 
-        // Logic for Home Page (Exact match for / or /index.html)
-        if (linkPath === '/') {
-            if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/about') && !currentPath.includes('/contact')) {
-                link.classList.add('active');
-            }
-        }
-        // Logic for other pages (Check if the URL contains the link path)
-        else if (currentPath.includes(linkPath)) {
+        // Normalize paths for comparison
+        // This removes the base and trailing slashes so we compare clean names
+        const cleanPath = currentPath.replace(base, '').replace(/\/$/, '') || '/';
+        const cleanHref = href.replace(base, '').replace(/\/$/, '') || '/';
+
+        if (cleanPath === cleanHref || (cleanPath === '/index.html' && cleanHref === '/')) {
             link.classList.add('active');
         }
     });
