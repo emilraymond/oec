@@ -1,5 +1,6 @@
 {
   "About_Us": "About Us",
+  "Activities": "Activities",
   "Contact_Us": "Contact Us",
   "Footer_Links_Title": "Quick Links",
   "Footer_Mission": "We are a church dedicated to sharing love and grace within our community.",
@@ -7,6 +8,12 @@
   "Hero_CTA": "Learn More",
   "Hero_Slogan": "Welcome to OEC Church",
   "Hero_Subtext": "A house of worship, fellowship, and spiritual growth for all generations.",
+  "History": "History",
   "Home": "Home",
-  "Language": "العربية"
+  "Language": "العربية",
+  "Mission": "Mission",
+  "News": "News",
+  "Reflections": "Reflections",
+  "Services": "Services",
+  "Vision": "Vision"
 }

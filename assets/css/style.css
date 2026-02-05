@@ -11,14 +11,17 @@
 
 /* Custom Church Branding Colors (Optional) */
 .navbar-dark {
+    /* background-color: #1a1a1a !important; */
     background-color: #1a1a1a !important;
 }
 
 /* Styling for the tab you are currently on */
 .navbar-nav .nav-link.active {
-    color: #fff !important;
+    /* color: #fff !important; */
+color: #b59410 !important;
     /* Blue color for the active tab */
-    border-bottom: 2px solid #0d6efd;
+    /* border-bottom: 2px solid #0d6efd; */
+    border-bottom: 2px solid #b59410;
     /* Adds an underline to the active tab */
 }
 
@@ -37,7 +40,7 @@ img {
 .hero-section {
     height: 60vh;
     /* background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center; */
-    background: url('../assets/images/slogan.jpg') no-repeat center center;
+    background: url('../images/slogan.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
 }
@@ -89,7 +92,11 @@ footer {
 }
 
 .footer a:hover i {
-    color: #0d6efd;
+    /* color: #0d6efd; */
+    color: #b59410;
     /* Bootstrap Primary Blue */
     transform: scale(1.2);
 }
+
+/* ================= */
+

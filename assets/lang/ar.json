@@ -1,5 +1,6 @@
 {
   "About_Us": "من نحن",
+  "Activities": "النشاطات",
   "Contact_Us": "اتصل بنا",
   "Footer_Links_Title": "روابط سريعة",
   "Footer_Mission": "نحن كنيسة تهدف إلى نشر المحبة والنعمة في مجتمعنا.",
@@ -7,6 +8,12 @@
   "Hero_CTA": "اكتشف المزيد",
   "Hero_Slogan": "مرحباً بكم في كنيسة OEC",
   "Hero_Subtext": "بيت العبادة، الشركة، والنمو الروحي لجميع الأجيال.",
+  "History": "التاريخ",
   "Home": "الرئيسية",
-  "Language": "English"
+  "Language": "English",
+  "Mission": "الرسالة",
+  "News": "الأخبار",
+  "Reflections": "تأملات",
+  "Services": "الاجتماعات",
+  "Vision": "الروئية"
 }
