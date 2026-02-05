@@ -10,7 +10,9 @@ const getBasePath = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initial load of the navbar and footer
-    loadLayout();
+    loadLayout().then(() => {
+        loadContactData(); // Run after layout is loaded
+    });
 });
 
 async function loadLayout() {
@@ -91,6 +93,9 @@ function toggleLanguage() {
     const newLang = currentLang === 'ar' ? 'en' : 'ar';
     localStorage.setItem('church_lang', newLang);
     applyLanguage(newLang);
+    
+    // Manually trigger the contact data reload to update the contact page if visible
+    loadContactData();
 }
 
 function highlightActiveLink() {
@@ -111,4 +116,50 @@ function highlightActiveLink() {
             link.classList.add('active');
         }
     });
+}
+
+// loadContactData
+
+async function loadContactData() {
+    const contactContainer = document.getElementById('contact-info-wrapper');
+    if (!contactContainer) return; // Only runs on the contact page
+
+    const base = getBasePath();
+    try {
+        const response = await fetch(`${base}/assets/contact_info/contact.json`);
+        const data = await response.json();
+
+        const currentLang = localStorage.getItem('church_lang') || 'ar';
+        
+        // Populate Text Fields
+        const fields = {
+            'info-email': data.address_email,
+            'info-phone': data.number_phone,
+            'info-whatsapp': data.number_whatsapp,
+            'info-address': (currentLang === 'ar') ? data.address_location_ar : data.address_location_en
+        };
+
+        for (const [id, value] of Object.entries(fields)) {
+            const el = document.getElementById(id);
+            if (el) el.innerText = value;
+        }
+
+        // Populate Social Links
+        const fbLink = document.getElementById('info-fb');
+        const ytLink = document.getElementById('info-yt');
+        const igLink = document.getElementById('info-ig');
+        if (fbLink) fbLink.href = data.link_facebook;
+        if (ytLink) ytLink.href = data.link_youtube;
+        if (igLink) igLink.href = data.link_instagram;
+
+        // Populate Google Maps (using coordinates from JSON)
+        const mapIframe = document.getElementById('info-map');
+        if (mapIframe && data.address_coordinates) {
+            // Standard Google Maps Embed URL using coordinates
+            mapIframe.src = `https://maps.google.com/maps?q=${data.address_coordinates}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+        }
+
+    } catch (err) {
+        console.error("Error loading contact data:", err);
+    }
 }

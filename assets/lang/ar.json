@@ -2,7 +2,7 @@
   "About_Us": "من نحن",
   "Activities": "النشاطات",
   "All_Services": "جميع الاجتماعات",
-  "Contact_Us": "اتصل بنا",
+  "Contact_Us": "تواصل معنا",
   "Footer_Links_Title": "روابط سريعة",
   "Footer_Mission": "نحن كنيسة تهدف إلى نشر المحبة والنعمة في مجتمعنا.",
   "Footer_Rights": "جميع الحقوق محفوظة.",
@@ -20,5 +20,12 @@
   "Sec_Services": "الاجتماعات الفرعية",
   "Services": "الاجتماعات",
   "Vision": "الروئية",
-  "Series": "السلسلات"
+  "Series": "السلسلات",
+  "Phone": "الهاتف",
+  "Phone/Whatsapp": "الهاتف/الواتساب",
+  "Whatsapp": "الواتساب",
+  "Email_Address": "البريد الإلكتروني",
+  "Address": "العنون",
+  "Location": "الموقع",
+  "Follow_Us": "تابعنا على"
 }

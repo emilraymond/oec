@@ -20,5 +20,12 @@
   "Sec_Services": "Secondary Services",
   "Services": "Services",
   "Vision": "Vision",
-  "Series": "Series"
+  "Series": "Series",
+  "Phone": "Phone",
+  "Phone/Whatsapp": "Phone/Whatsapp",
+  "Whatsapp": "Whatsapp",
+  "Email_Address": "Email Address",
+  "Address": "Address",
+  "Location": "Location",
+  "Follow_Us": "Follow Us"
 }
