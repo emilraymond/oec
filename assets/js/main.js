@@ -149,9 +149,12 @@ async function loadContactData() {
         }
 
         // Populate Social Links
-        document.getElementById('link-fb').href = data.link_facebook;
-        document.getElementById('link-yt').href = data.link_youtube;
-        document.getElementById('link-ig').href = data.link_instagram;
+        const linkFB = document.getElementById('link-fb');
+        if (linkFB) { linkFB.href = data.link_facebook; }
+        const linkYT = document.getElementById('link-yt');
+        if (linkYT) { linkYT.href = data.link_youtube; }
+        const linkIG = document.getElementById('link-ig');
+        if (linkIG) { linkIG.href = data.link_instagram; }
 
         // Populate Google Maps (using coordinates from JSON)
         const mapIframe = document.getElementById('info-map');

@@ -37,12 +37,29 @@ img {
 }
 
 /* Hero Section Styling */
-.hero-section {
+.hero-section_1 {
     height: 60vh;
     /* background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center; */
     background: url('../images/slogan.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
+}
+
+.hero-section {
+    /* vh = viewport height. 100vh is the full screen height. */
+    /* We subtract roughly 70px (average navbar height) to avoid a scrollbar */
+    min-height: calc(100vh - 70px); 
+    
+    background: url('../images/slogan.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    
+    /* Ensure the content stays centered even as height changes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
 }
 
 .hero-overlay {
@@ -60,6 +77,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+}
+
+#navbar-placeholder {
+    flex-shrink: 0;
+}
+
+#footer-placeholder {
+    flex-shrink: 0;
 }
 
 main {
