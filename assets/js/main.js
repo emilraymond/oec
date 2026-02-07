@@ -93,7 +93,7 @@ function toggleLanguage() {
     const newLang = currentLang === 'ar' ? 'en' : 'ar';
     localStorage.setItem('church_lang', newLang);
     applyLanguage(newLang);
-    
+
     // Manually trigger the contact data reload to update the contact page if visible
     loadContactData();
 }
@@ -128,29 +128,34 @@ async function loadContactData() {
     try {
         const response = await fetch(`${base}/assets/contact_info/contact.json`);
         const data = await response.json();
-
         const currentLang = localStorage.getItem('church_lang') || 'ar';
-        
-        // Populate Text Fields
-        const fields = {
-            'info-email': data.address_email,
-            'info-phone': data.number_phone,
-            'info-whatsapp': data.number_whatsapp,
-            'info-address': (currentLang === 'ar') ? data.address_location_ar : data.address_location_en
-        };
 
-        for (const [id, value] of Object.entries(fields)) {
-            const el = document.getElementById(id);
-            if (el) el.innerText = value;
+        // Populate Text Fields
+        const infoPhone = document.getElementById('info-phone');
+        if (infoPhone) {
+            infoPhone.innerText = data.number_phone;
+            infoPhone.href = `tel:${data.number_phone}`;
+        }
+        const infoWhatsApp = document.getElementById('info-whatsapp');
+        if (infoWhatsApp) {
+            infoWhatsApp.innerText = data.number_whatsapp; // Displayed number
+            infoWhatsApp.href = `https://wa.me/${data.number_whatsapp}`; // Displayed number
+        }
+        const infoEmail = document.getElementById('info-email');
+        if (infoEmail) {
+            infoEmail.innerText = data.address_email;
+            infoEmail.href = `mailto:${data.address_email}`;
+        }
+        const infoAddress = document.getElementById('info-address');
+        if (infoPhone) {
+            infoAddress.innerText = (currentLang === 'ar') ? data.address_location_ar : data.address_location_en
+            // infoAddress.href = (currentLang === 'ar') ? data.address_location_ar : data.address_location_en
         }
 
         // Populate Social Links
-        const fbLink = document.getElementById('info-fb');
-        const ytLink = document.getElementById('info-yt');
-        const igLink = document.getElementById('info-ig');
-        if (fbLink) fbLink.href = data.link_facebook;
-        if (ytLink) ytLink.href = data.link_youtube;
-        if (igLink) igLink.href = data.link_instagram;
+        document.getElementById('link-fb').href = data.link_facebook;
+        document.getElementById('link-yt').href = data.link_youtube;
+        document.getElementById('link-ig').href = data.link_instagram;
 
         // Populate Google Maps (using coordinates from JSON)
         const mapIframe = document.getElementById('info-map');
