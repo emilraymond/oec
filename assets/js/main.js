@@ -179,7 +179,8 @@ async function loadServices() {
         grid.innerHTML = services.map(service => `
             <div class="col">
                 <!-- <a href="service-details.html?id=${service.id}" class="text-decoration-none"> -->
-                <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');">
+                <!-- <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');"> -->
+                <a class="text-decoration-none">
                     <div class="card h-100 border-0 shadow-sm service-card">
                         <!-- <img src="${service.image}" class="card-img-top" alt="${service.id}" 
                              style="height: 200px; object-fit: cover;"> -->
