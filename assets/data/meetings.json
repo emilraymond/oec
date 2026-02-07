@@ -8,7 +8,7 @@
     "brief_en": "A time for prayer, worship, and fellowship every Sunday.",
     "time_ar": "الأحد ٩ ص و ٧ م",
     "time_en": "Sunday 9 AM and 7 PM",
-    "image": "../../assets/images/services/sunday.jpg"
+    "image": "../../assets/images/meetings/sunday.jpg"
   },
   {
     "_comment": "2",
@@ -19,7 +19,7 @@
     "brief_en": "",
     "time_ar": "",
     "time_en": "",
-    "image": "../../assets/images/services/family.jpg"
+    "image": "../../assets/images/meetings/family.jpg"
   },
   {
     "_comment": "3",
@@ -30,7 +30,7 @@
     "brief_en": "",
     "time_ar": "الخميس ٧ م",
     "time_en": "Tursday 7 PM",
-    "image": "../../assets/images/services/prayer.jpg"
+    "image": "../../assets/images/meetings/prayer.jpg"
   },
   {
     "_comment": "4",
@@ -41,7 +41,7 @@
     "brief_en": "",
     "time_ar": "الجمعة ٤ م",
     "time_en": "Friday 4 PM",
-    "image": "../../assets/images/services/sunday_school.jpg"
+    "image": "../../assets/images/meetings/sunday_school.jpg"
   },
   {
     "_comment": "5",
@@ -52,7 +52,7 @@
     "brief_en": "",
     "time_ar": "الجمعة ١١ ص",
     "time_en": "Friday 11 AM",
-    "image": "../../assets/images/services/middle_school.jpg"
+    "image": "../../assets/images/meetings/middle_school.jpg"
   },
   {
     "_comment": "6",
@@ -63,7 +63,7 @@
     "brief_en": "",
     "time_ar": "الجمعة ٦ م",
     "time_en": "Friday 6 PM",
-    "image": "../../assets/images/services/high_school.jpg"
+    "image": "../../assets/images/meetings/high_school.jpg"
   },
   {
     "_comment": "7",
@@ -74,7 +74,7 @@
     "brief_en": "Spiritual and life discussions relevant to the youth.",
     "time_ar": "السبت ٦ م",
     "time_en": "Saturday 6 PM",
-    "image": "../../assets/images/services/youth.jpg"
+    "image": "../../assets/images/meetings/youth.jpg"
   },
   {
     "_comment": "8",
@@ -85,7 +85,7 @@
     "brief_en": "",
     "time_ar": "",
     "time_en": "",
-    "image": "../../assets/images/services/foreigners.jpg"
+    "image": "../../assets/images/meetings/foreigners.jpg"
   },
   {
     "_comment": "9",
@@ -96,6 +96,6 @@
     "brief_en": "",
     "time_ar": "الأربعاء ٦ م",
     "time_en": "Wednesday 6 PM",
-    "image": "../../assets/images/services/ladies.jpg"
+    "image": "../../assets/images/meetings/ladies.jpg"
   }
 ]

@@ -8,7 +8,7 @@ const getBasePath = () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadLayout();
-    if (document.getElementById('services-grid')) {
+    if (document.getElementById('meetings-grid')) {
         await loadServices();
     }
     if (document.getElementById('contact-info-wrapper')) {
@@ -48,7 +48,7 @@ async function toggleLanguage() {
     const newLang = currentLang === 'ar' ? 'en' : 'ar';
     localStorage.setItem('church_lang', newLang);
     await applyLanguage(newLang);
-    if (document.getElementById('services-grid')) {
+    if (document.getElementById('meetings-grid')) {
         await loadServices();
     }
     if (document.getElementById('contact-info-wrapper')) {
@@ -166,17 +166,17 @@ async function loadContactData() {
 }
 
 async function loadServices() {
-    const grid = document.getElementById('services-grid');
+    const grid = document.getElementById('meetings-grid');
     if (!grid) return;
 
     const base = getBasePath();
     const lang = localStorage.getItem('church_lang') || 'ar';
 
     try {
-        const res = await fetch(`${base}/assets/data/services.json`);
-        const services = await res.json();
+        const res = await fetch(`${base}/assets/data/meetings.json`);
+        const meetings = await res.json();
 
-        grid.innerHTML = services.map(service => `
+        grid.innerHTML = meetings.map(service => `
             <div class="col">
                 <!-- <a href="service-details.html?id=${service.id}" class="text-decoration-none"> -->
                 <!-- <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');"> -->
@@ -202,6 +202,6 @@ async function loadServices() {
             </div>
         `).join('');
     } catch (err) {
-        console.error("Failed to load services:", err);
+        console.error("Failed to load meetings:", err);
     }
 }
