@@ -1,3 +1,5 @@
+/* ================= General ================= */
+
 /* Custom Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap');
 
@@ -9,34 +11,39 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* Custom Church Branding Colors (Optional) */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ================= NavBar ================= */
+
 .navbar-dark {
-    /* background-color: #1a1a1a !important; */
     background-color: #1a1a1a !important;
 }
 
-/* Styling for the tab you are currently on */
 .navbar-nav .nav-link.active {
-    /* color: #fff !important; */
     color: #b59410 !important;
-    /* Blue color for the active tab */
-    /* border-bottom: 2px solid #0d6efd; */
     border-bottom: 2px solid #b59410;
-    /* Adds an underline to the active tab */
 }
 
-/* Hover effect for the other tabs */
 .navbar-nav .nav-link:hover {
     color: #fff !important;
 }
 
-/* Ensure images don't overflow */
+#navbar-placeholder {
+    flex-shrink: 0;
+}
+
+/* ================= Hero ================= */
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Hero Section Styling */
 .hero-section_1 {
     height: 60vh;
     /* background: url('https://placehold.co/1920x1080/212529/ffffff?text=Church+Image+Placeholder') no-repeat center center; */
@@ -73,23 +80,7 @@ img {
     z-index: 1;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* .navbar {
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-} */
-
-#navbar-placeholder {
-    flex-shrink: 0;
-}
+/* ================= Footer ================= */
 
 #footer-placeholder {
     flex-shrink: 0;
@@ -99,26 +90,6 @@ main {
     flex: 1;
     /* Pushes the footer down if content is short */
 }
-
-/**********
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-// This ensures the main content area takes up remaining space
-main {
-    flex: 1 0 auto;
-}
-
-footer {
-    flex-shrink: 0;
-}
-**********/
 
 .footer a i {
     transition: transform 0.3s ease, color 0.3s ease;
@@ -131,34 +102,36 @@ footer {
     transform: scale(1.2);
 }
 
-/* ================= */
+/* ================= Cards ================= */
 
-.meeting-card {
+.theme-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
     overflow: hidden;
 }
 
-.meeting-card:hover {
+.theme-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
-.meeting-card h5 {
+.theme-card h5 {
     transition: color 0.3s ease;
 }
 
-.meeting-card:hover h4 {
+.theme-card:hover h4 {
     color: #b59410 !important;
     /* Church Gold highlight */
 }
 
-.meeting-card:hover h6 {
+.theme-card:hover h6 {
     color: #b59410 !important;
     /* Church Gold highlight */
 }
 
-.meeting-card:hover p {
+.theme-card:hover p {
     color: #b59410 !important;
     /* Church Gold highlight */
 }
+
+/* =================  ================= */

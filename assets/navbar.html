@@ -1,5 +1,5 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm bg-dark">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+    <div class="container-fluid navbar-scrollable-content">
         <div class="navbar-brand d-flex align-items-center">
             <img src="/assets/images/logo.jpg" alt="OEC Logo" width="40" height="40"
                 class="d-inline-block align-top me-2 ms-2 logo-img">
@@ -13,7 +13,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/" data-i18n="Home"></a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about" data-i18n="About_Us"></a>
+                </li>
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false" data-i18n="About_Us"> </a>
                     <ul class="dropdown-menu dropdown-menu-dark">
@@ -25,8 +28,7 @@
                         <li><a class="dropdown-item" href="/about/vision.html" data-i18n="Vision"></a></li>
                         <li><a class="dropdown-item" href="/about/mission.html" data-i18n="Mission"></a></li>
                     </ul>
-                </li>
-
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="/meetings" data-i18n="Meetings"></a>
                 </li>
@@ -34,7 +36,6 @@
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/live_stream" data-i18n="Live_Stream"></a>
                 </li>
-
                 <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/meetings" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false" data-i18n="Meetings"> </a>
@@ -46,7 +47,6 @@
                         <li><a class="dropdown-item disabled" href="/meetings/" data-i18n="Live_Stream"></a></li>
                     </ul>
                 </li> -->
-
                 <li class="nav-item">
                     <a class="nav-link disabled" href="/reflections" data-i18n="Reflections"></a>
                 </li>
@@ -58,26 +58,20 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/hostels" data-i18n="Hostels"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-i18n="tasbe7na" onclick="goTo_tasbe7na()"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact" data-i18n="Contact_Us"></a>
                 </li>
                 <!--  -->
-                <!-- <li class="nav-item">
-                    <a class="nav-link disabled" href="/reflections" data-i18n="Reflections"></a>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" data-i18n="Library"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/news" data-i18n="News"></a>
+                    <a class="nav-link disabled" href="#" data-i18n="Dictionary"></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/activities" data-i18n="Activities"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/hostels" data-i18n="Hostels"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact" data-i18n="Contact_Us"></a>
-                </li> -->
             </ul>
             <div class="navbar-nav">
                 <button class="btn btn-outline-light" id="lang-toggle" onclick="toggleLanguage()"

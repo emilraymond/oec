@@ -205,8 +205,7 @@ async function loadServices() {
             <div class="col">
                 <!-- <a href="service-details.html?id=${service.id}" class="text-decoration-none"> -->
                 <!-- <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');"> -->
-                <a class="text-decoration-none">
-                    <div class="card h-100 border-0 shadow-sm meeting-card">
+                    <div class="card h-100 border-0 shadow-sm theme-card">
                         <!-- <img src="${service.image}" class="card-img-top" alt="${service.id}" 
                              style="height: 200px; object-fit: cover;"> -->
                         <img src="https://placehold.co/1920x1080/212529/ffffff?text=${service.id}+Image+Placeholder" class="card-img-top" alt="${service.id}" 
@@ -228,5 +227,16 @@ async function loadServices() {
         `).join('');
     } catch (err) {
         console.error("Failed to load meetings:", err);
+    }
+}
+
+function goTo_tasbe7na() {
+    const lang = localStorage.getItem('church_lang') || 'ar';
+    const ask = lang === 'ar' ? "انتقل الى تسبيحنا؟" : "Go to Tasbe7na?";
+
+    if (confirm(ask)) {
+        window.location.href = "https://tasbe7na.com/web/";
+    } else {
+
     }
 }
