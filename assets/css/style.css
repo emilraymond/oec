@@ -18,7 +18,7 @@
 /* Styling for the tab you are currently on */
 .navbar-nav .nav-link.active {
     /* color: #fff !important; */
-color: #b59410 !important;
+    color: #b59410 !important;
     /* Blue color for the active tab */
     /* border-bottom: 2px solid #0d6efd; */
     border-bottom: 2px solid #b59410;
@@ -48,12 +48,12 @@ img {
 .hero-section {
     /* vh = viewport height. 100vh is the full screen height. */
     /* We subtract roughly 70px (average navbar height) to avoid a scrollbar */
-    min-height: calc(100vh - 70px); 
-    
+    min-height: calc(100vh - 70px);
+
     background: url('../images/slogan.jpg') no-repeat center center;
     background-size: cover;
     width: 100%;
-    
+
     /* Ensure the content stays centered even as height changes */
     display: flex;
     align-items: center;
@@ -79,6 +79,17 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+/* .navbar {
+    background-color: #333;
+    position: sticky;
+    /* Toggles between relative and fixed based on scroll position */
+    top: 0;
+    /* The offset point where it becomes "stuck" */
+    z-index: 999;
+    /* Other styles as needed (width, padding, etc.) */
+} */
+
 
 #navbar-placeholder {
     flex-shrink: 0;
@@ -126,27 +137,32 @@ footer {
 
 /* ================= */
 
-.service-card {
+.meeting-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 12px;
     overflow: hidden;
 }
 
-.service-card:hover {
+.meeting-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
 }
 
-.service-card h5 {
+.meeting-card h5 {
     transition: color 0.3s ease;
 }
 
-.service-card:hover h4 {
-    color: #b59410 !important; /* Church Gold highlight */
+.meeting-card:hover h4 {
+    color: #b59410 !important;
+    /* Church Gold highlight */
 }
-.service-card:hover h6 {
-    color: #b59410 !important; /* Church Gold highlight */
+
+.meeting-card:hover h6 {
+    color: #b59410 !important;
+    /* Church Gold highlight */
 }
-.service-card:hover p {
-    color: #b59410 !important; /* Church Gold highlight */
+
+.meeting-card:hover p {
+    color: #b59410 !important;
+    /* Church Gold highlight */
 }

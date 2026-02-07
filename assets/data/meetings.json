@@ -1,28 +1,25 @@
 [
   {
-    "_comment": "1",
-    "id": "sunday-meeting",
-    "title_ar": "اجتماع الأحد",
-    "title_en": "Sunday Service",
+    "id": "sunday_morning-meeting",
+    "title_ar": "اجتماع الأحد صباحاً",
+    "title_en": "Sunday Morning Service",
     "brief_ar": "وقت للصلاة والعبادة والشركة الروحية كل أحد.",
     "brief_en": "A time for prayer, worship, and fellowship every Sunday.",
-    "time_ar": "الأحد ٩ ص و ٧ م",
-    "time_en": "Sunday 9 AM and 7 PM",
-    "image": "../../assets/images/meetings/sunday.jpg"
+    "time_ar": "الأحد ٩ ص",
+    "time_en": "Sunday 9 AM",
+    "image": "../../assets/images/meetings/sunday_morning.jpg"
   },
   {
-    "_comment": "2",
-    "id": "family-meeting",
-    "title_ar": "اجتماع الأسرة",
-    "title_en": "Family Meeting",
-    "brief_ar": "",
-    "brief_en": "",
-    "time_ar": "",
-    "time_en": "",
-    "image": "../../assets/images/meetings/family.jpg"
+    "id": "sunday_evening-meeting",
+    "title_ar": "اجتماع الأحد مساءً",
+    "title_en": "Sunday Evening Service",
+    "brief_ar": "وقت للصلاة والعبادة والشركة الروحية كل أحد.",
+    "brief_en": "A time for prayer, worship, and fellowship every Sunday.",
+    "time_ar": "الأحد ٧ م",
+    "time_en": "Sunday 7 PM",
+    "image": "../../assets/images/meetings/sunday_evening.jpg"
   },
   {
-    "_comment": "3",
     "id": "prayer-meeting",
     "title_ar": "اجتماع الصلاة",
     "title_en": "Prayer Meeting",
@@ -33,7 +30,16 @@
     "image": "../../assets/images/meetings/prayer.jpg"
   },
   {
-    "_comment": "4",
+    "id": "ladies-meeting",
+    "title_ar": "اجتماع السيدات",
+    "title_en": "Ladies Meeting",
+    "brief_ar": "",
+    "brief_en": "",
+    "time_ar": "الأربعاء ٦ م",
+    "time_en": "Wednesday 6 PM",
+    "image": "../../assets/images/meetings/ladies.jpg"
+  },
+  {
     "id": "sunday_school-meeting",
     "title_ar": "اجتماع مدارس الأحد",
     "title_en": "Sunday School Meeting",
@@ -44,7 +50,6 @@
     "image": "../../assets/images/meetings/sunday_school.jpg"
   },
   {
-    "_comment": "5",
     "id": "middle_school-meeting",
     "title_ar": "اجتماع إعدادي",
     "title_en": "Middle School Meeting",
@@ -55,7 +60,6 @@
     "image": "../../assets/images/meetings/middle_school.jpg"
   },
   {
-    "_comment": "6",
     "id": "high_school-meeting",
     "title_ar": "اجتماع ثانوي",
     "title_en": "High School Meeting",
@@ -66,7 +70,6 @@
     "image": "../../assets/images/meetings/high_school.jpg"
   },
   {
-    "_comment": "7",
     "id": "youth-meeting",
     "title_ar": "اجتماع الشباب",
     "title_en": "Youth Meeting",
@@ -77,7 +80,6 @@
     "image": "../../assets/images/meetings/youth.jpg"
   },
   {
-    "_comment": "8",
     "id": "foreigners-meeting",
     "title_ar": "اجتماع المغتربين",
     "title_en": "Foreigners Meeting",
@@ -88,14 +90,13 @@
     "image": "../../assets/images/meetings/foreigners.jpg"
   },
   {
-    "_comment": "9",
-    "id": "ladies-meeting",
-    "title_ar": "اجتماع السيدات",
-    "title_en": "Ladies Meeting",
+    "id": "family-meeting",
+    "title_ar": "اجتماع الأسرة",
+    "title_en": "Family Meeting",
     "brief_ar": "",
     "brief_en": "",
-    "time_ar": "الأربعاء ٦ م",
-    "time_en": "Wednesday 6 PM",
-    "image": "../../assets/images/meetings/ladies.jpg"
+    "time_ar": "",
+    "time_en": "",
+    "image": "../../assets/images/meetings/family.jpg"
   }
 ]

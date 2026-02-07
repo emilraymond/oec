@@ -16,6 +16,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+// document.addEventListener('mouseout', function (event) {
+//     alert(event);
+// });
+
+// document.addEventListener('click', function (event) {
+//     const navbarToggler = document.querySelector('.navbar-toggler');
+//     const navbarCollapse = document.querySelector('.navbar-collapse');
+
+//     // Check if the navbar is currently open and the click is outside the navbar and toggler
+//     const isNavbarOpen = navbarCollapse.classList.contains('show');
+//     const isClickInsideNavbar = navbarCollapse.contains(event.target);
+//     const isClickOnToggler = navbarToggler.contains(event.target);
+
+//     if (isNavbarOpen && !isClickInsideNavbar && !isClickOnToggler) {
+//         // Hide the navbar using Bootstrap's native JS method
+//         const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+//             toggle: false
+//         });
+//         bsCollapse.hide();
+//     }
+// });
+
 /* ========== */
 
 async function applyLanguage(lang) {
@@ -184,7 +206,7 @@ async function loadServices() {
                 <!-- <a href="service-details.html?id=${service.id}" class="text-decoration-none"> -->
                 <!-- <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');"> -->
                 <a class="text-decoration-none">
-                    <div class="card h-100 border-0 shadow-sm service-card">
+                    <div class="card h-100 border-0 shadow-sm meeting-card">
                         <!-- <img src="${service.image}" class="card-img-top" alt="${service.id}" 
                              style="height: 200px; object-fit: cover;"> -->
                         <img src="https://placehold.co/1920x1080/212529/ffffff?text=${service.id}+Image+Placeholder" class="card-img-top" alt="${service.id}" 
