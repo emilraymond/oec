@@ -83,13 +83,9 @@ body {
 /* .navbar {
     background-color: #333;
     position: sticky;
-    /* Toggles between relative and fixed based on scroll position */
     top: 0;
-    /* The offset point where it becomes "stuck" */
     z-index: 999;
-    /* Other styles as needed (width, padding, etc.) */
 } */
-
 
 #navbar-placeholder {
     flex-shrink: 0;
