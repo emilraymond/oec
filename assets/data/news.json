@@ -1,0 +1,42 @@
+[
+  {
+    "id": "id5",
+    "title_ar": "خبر 5",
+    "title_en": "News #5",
+    "brief_ar": "ملخص 5",
+    "brief_en": "Brief #5",
+    "image": "../../assets/images/news/news_5.jpg"
+  },
+  {
+    "id": "id4",
+    "title_ar": "خبر 4",
+    "title_en": "News #4",
+    "brief_ar": "ملخص 4",
+    "brief_en": "Brief #4",
+    "image": "../../assets/images/news/news_4.jpg"
+  },
+  {
+    "id": "id3",
+    "title_ar": "خبر 3",
+    "title_en": "News #3",
+    "brief_ar": "ملخص 3",
+    "brief_en": "Brief #3",
+    "image": "../../assets/images/news/news_3.jpg"
+  },
+  {
+    "id": "id2",
+    "title_ar": "خبر 2",
+    "title_en": "News #2",
+    "brief_ar": "ملخص 2",
+    "brief_en": "Brief #2",
+    "image": "../../assets/images/news/news_2.jpg"
+  },
+  {
+    "id": "id1",
+    "title_ar": "خبر 1",
+    "title_en": "News #1",
+    "brief_ar": "ملخص 1",
+    "brief_en": "Brief #1",
+    "image": "../../assets/images/news/news_1.jpg"
+  }
+]

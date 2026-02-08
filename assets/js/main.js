@@ -1,3 +1,5 @@
+/* ================= General ================= */
+
 const getBasePath = () => {
     const path = window.location.pathname;
     if (path.includes('/oec')) {
@@ -8,8 +10,12 @@ const getBasePath = () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
     await loadLayout();
-    if (document.getElementById('meetings-grid')) {
-        await loadServices();
+    if (document.getElementById('meetings-wrapper')) {
+        await loadMeetings();
+    }
+    if (document.getElementById('news-wrapper')) {
+        await loadContactData();
+        await loadNews();
     }
     if (document.getElementById('contact-info-wrapper')) {
         await loadContactData();
@@ -38,7 +44,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 //     }
 // });
 
-/* ========== */
+/* ================= Language ================= */
 
 async function applyLanguage(lang) {
     const base = getBasePath();
@@ -70,15 +76,18 @@ async function toggleLanguage() {
     const newLang = currentLang === 'ar' ? 'en' : 'ar';
     localStorage.setItem('church_lang', newLang);
     await applyLanguage(newLang);
-    if (document.getElementById('meetings-grid')) {
-        await loadServices();
+    if (document.getElementById('meetings-wrapper')) {
+        await loadMeetings();
+    }
+    if (document.getElementById('news-wrapper')) {
+        await loadNews();
     }
     if (document.getElementById('contact-info-wrapper')) {
         await loadContactData();
     }
 }
 
-/* ========== */
+/* ================= Layout/Navbar/Footer ================= */
 
 async function loadLayout() {
     const base = getBasePath();
@@ -136,11 +145,12 @@ function highlightActiveLink() {
     });
 }
 
-/* ========== */
+/* ================= Contact ================= */
 
 async function loadContactData() {
     const contactContainer = document.getElementById('contact-info-wrapper');
-    if (!contactContainer) return; // Only runs on the contact page
+    const newsContainer = document.getElementById('news-wrapper');
+    if (!newsContainer && !contactContainer) return; // Only runs on the contact page
 
     const base = getBasePath();
     try {
@@ -190,7 +200,9 @@ async function loadContactData() {
     }
 }
 
-async function loadServices() {
+/* ================= Meetings ================= */
+
+async function loadMeetings() {
     const grid = document.getElementById('meetings-grid');
     if (!grid) return;
 
@@ -229,6 +241,47 @@ async function loadServices() {
         console.error("Failed to load meetings:", err);
     }
 }
+
+/* ================= News ================= */
+
+async function loadNews() {
+    const grid = document.getElementById('news-grid');
+    if (!grid) return;
+
+    const base = getBasePath();
+    const lang = localStorage.getItem('church_lang') || 'ar';
+
+    try {
+        const res = await fetch(`${base}/assets/data/news.json`);
+        const meetings = await res.json();
+
+        grid.innerHTML = meetings.map(service => `
+            <div class="col">
+                <!-- <a href="service-details.html?id=${service.id}" class="text-decoration-none"> -->
+                <!-- <a class="text-decoration-none" onclick="alert('${lang === 'ar' ? service.title_ar : service.title_en}');"> -->
+                    <div class="card h-100 border-0 shadow-sm theme-card">
+                        <!-- <img src="${service.image}" class="card-img-top" alt="${service.id}" 
+                             style="height: 200px; object-fit: cover;"> -->
+                        <!-- <img src="https://placehold.co/1920x1080/212529/ffffff?text=${service.id}+Image+Placeholder" class="card-img-top" alt="${service.id}" 
+                             style="height: 200px; object-fit: cover;"> -->
+                        <div class="card-body text-center">
+                            <h4 class="card-title fw-bold text-dark">
+                                ${lang === 'ar' ? service.title_ar : service.title_en}
+                            </h4>
+                            <p class="card-text text-muted small">
+                                ${lang === 'ar' ? service.brief_ar : service.brief_en}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        `).join('');
+    } catch (err) {
+        console.error("Failed to load meetings:", err);
+    }
+}
+
+/* ================= Tasbe7na ================= */
 
 function goTo_tasbe7na() {
     const lang = localStorage.getItem('church_lang') || 'ar';
